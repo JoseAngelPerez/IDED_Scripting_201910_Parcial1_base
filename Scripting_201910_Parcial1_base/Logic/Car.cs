@@ -2,6 +2,9 @@
 {
     public class Car : Vehicle
     {
+        public Nitro nitro = new Nitro();
+        public Turbo turbo = new Turbo();
+
         public Car() : base()
         {
         }

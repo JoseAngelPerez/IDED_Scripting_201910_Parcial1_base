@@ -2,6 +2,8 @@
 {
     public class Bike : Vehicle
     {
+        public Muffler muffler = new Muffler();
+        public Turbo turbo = new Turbo();
         public Bike() : base()
         {
         }

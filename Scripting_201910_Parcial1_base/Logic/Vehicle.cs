@@ -3,8 +3,10 @@
     public abstract class Vehicle
     {
         protected float baseMaxSpeed;
-
+        private float PorcentajeBonus=0.05f;
+        private int UpgradeCount=0;
         protected int Level { get; set; }
+         
 
         protected abstract VehicleType Type { get; }
 
@@ -27,6 +29,7 @@
             baseMaxSpeed = _baseMaxSpeed;
             Level = 0;
             CurrentPart = null;
+            baseMaxSpeed = baseMaxSpeed + CurrentPart.SpeedBonus;
         }
 
         public bool Equip(Part part)
@@ -42,6 +45,15 @@
 
         public void Upgrade()
         {
+            if (UpgradeCount < 4)
+            {
+                baseMaxSpeed = baseMaxSpeed + (baseMaxSpeed * PorcentajeBonus);
+                Level++;
+                CurrentPart.Upgrade();
+                UpgradeCount++;
+            }
         }
+
+        
     }
 }
