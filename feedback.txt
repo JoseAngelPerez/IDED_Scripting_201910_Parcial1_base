@@ -1,0 +1,14 @@
+Parcial (2.5 / 5.0)
+	* El código se entregó con errores de compilación.
+	* Por qué se crean instancias de las partes equipables en cada vehículo?
+	* Muy buena la adición de durability en el constructor de Part, pero eso también debía agregarse entonces a los constructores de las clases derivadas.
+	* El accesor Part.Durability siempre retorna 0.
+	* Part.Upgrade() no controla cuántas mejoras puede tener una parte.
+	* Por qué el constructor de Vehicle intenta asignar baseMaxSpeed teniendo en cuenta una parte que en la línea inmediatamente anterior se asigna nula?
+	* Vehicle.Equip() no está implementada.
+	* La implementación de Vehicle.Upgrade() no es del todo incorrecta, pero hace innecesaria la propiedad Vehicle.Level. Por otro lado, como Equip() no hace nada, CurrentPart = null siempre, así que ninguna parte se mejoraría.
+
+Bonificación (0.0 / 0.5)
+	No se presentó propuesta para la bonificación
+	
+Total: 2.5 / 5.0
